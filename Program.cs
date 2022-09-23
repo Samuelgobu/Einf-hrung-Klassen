@@ -15,7 +15,7 @@ namespace Einführung_Klassen
             //student1.Vorname = "Rohan";
             //student1.Vorname = "Khalil";
 
-            Student student1 = new Student("Rohan", "Acharya", 20, "Nepal", "T21");
+            Student student1 = new Student("Rohan", "Acharya", 20, "Nepal", "T21", "27.11.2001");
             
 
         }
@@ -47,6 +47,7 @@ namespace Einführung_Klassen
         private int Alter;
         private string Nationalität;
         private string Gruppe;
+        private string Birthday;
         /*Eigenschaften können public oder private sein. Eine public
          * Eigenschaft kann auch in anderen Klassen gesehen verändert
          * werden. Eine private Eigenschaft ist nur Methoden in der eigenen
@@ -57,13 +58,19 @@ namespace Einführung_Klassen
          * Ein Konstruktor sieht zum Beispiel so aus:
          * 
          */
-        public Student(string vorname, string nachname, int alter, string nation, string gruppe)
+        public Student(string vorname, string nachname, int alter, string nation, string gruppe, string birthday)
         {
             Vorname = vorname;
             Nachname = nachname;
             Alter = alter;
             Nationalität = nation;
             Gruppe = gruppe;
+            Birthday = birthday;
+        }
+        private static void Geburtstag()
+        {
+            //Wenn der Student Geburtstag hat, wird sein Alter um 1 erhöht.
+            DateTime
         }
     }
 }
