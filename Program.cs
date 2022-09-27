@@ -22,6 +22,9 @@ namespace Einführung_Klassen
 
             Hund hund1 = new Hund("Firulais", "Schwarz", 7, 75);
             hund1.Bellen();
+
+            Zylinder zy1 = new Zylinder(2.0, 5.0);
+            zy1.BerechenVolumen(2.0, 5.0);
         }
     }
     /* --- Klassen in C#---
@@ -109,6 +112,26 @@ namespace Einführung_Klassen
         public void Bellen()
         {
             Console.WriteLine(Name + " bellt jetzt. " + Name +" blafft Sie an");
+        }
+    }
+    class Zylinder
+    {
+        private double Radius;
+        private double Höhe;
+        private double Volumen;
+        private double Oberfläche;
+        public Zylinder(double radius, double höhe)
+        {
+            Radius = radius;
+            Höhe = höhe;
+            //Volumen = Math.PI * radius * radius * höhe;
+            Volumen = BerechenVolumen(radius, höhe);
+            Oberfläche = 2 * Math.PI * radius * radius + (2 * Math.PI * radius * höhe);
+        }
+        public double BerechenVolumen(double radius, double höhe)
+        {
+            return Math.PI * radius * radius * höhe;
+            Console.WriteLine(Volumen);
         }
     }
 }
